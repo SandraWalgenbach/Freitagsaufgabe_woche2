@@ -5,7 +5,6 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F00000000"
     tools:context=".Ui.HomeFragment">
 
     <TextView
@@ -13,14 +12,15 @@
         android:layout_width="211dp"
         android:layout_height="50dp"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="casual"
         android:text="Einkaufsliste"
         android:textColor="@color/black"
         android:textSize="34sp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="@+id/IBzurueck"
-        app:layout_constraintStart_toEndOf="@+id/IBzurueck"
-        app:layout_constraintTop_toTopOf="@+id/IBzurueck" />
+        app:layout_constraintEnd_toStartOf="@+id/IBplus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/IBplus"
@@ -33,17 +33,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/TVeinkaufsliste"
         app:tint="#8BC34A" />
-
-    <ImageButton
-        android:id="@+id/IBzurueck"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="@color/white"
-        android:src="@drawable/baseline_arrow_back_38"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="409dp"

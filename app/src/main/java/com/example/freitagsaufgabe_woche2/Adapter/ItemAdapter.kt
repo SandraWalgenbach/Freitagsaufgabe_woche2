@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.freitagsaufgabe_woche2.Data.Ware
 import com.example.freitagsaufgabe_woche2.databinding.ListItemBinding
 
-class WareAdapter(val dataset: MutableList<Ware>): RecyclerView.Adapter<WareAdapter.WareViewHolder>(){
+class ItemAdapter(val dataset: MutableList<Ware>): RecyclerView.Adapter<ItemAdapter.WareViewHolder>(){
 
     inner class WareViewHolder(val binding: ListItemBinding): RecyclerView.ViewHolder(binding.root)
 
@@ -21,9 +21,9 @@ class WareAdapter(val dataset: MutableList<Ware>): RecyclerView.Adapter<WareAdap
     }
 
     override fun onBindViewHolder(holder: WareViewHolder, position: Int){
-        val ware = dataset[position]
+        val eintrag = dataset[position]
 
-        holder.binding.TV.setText(ware.gegenstand)
+        holder.binding.TVelement.setText(eintrag.gegenstand.toString())
 
         holder.binding.IBloeschen.setOnClickListener {
             dataset.removeAt(holder.adapterPosition)

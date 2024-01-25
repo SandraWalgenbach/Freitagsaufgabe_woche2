@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/TV"
+        android:id="@+id/TVelement"
         android:layout_width="112dp"
         android:layout_height="40dp"
         android:layout_marginStart="20dp"
@@ -26,9 +26,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
         android:backgroundTint="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintBottom_toBottomOf="@+id/TVelement"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/TVelement"
         app:srcCompat="@drawable/baseline_delete_forever_38"
         app:tint="#F44336"
         tools:ignore="UnknownId" />

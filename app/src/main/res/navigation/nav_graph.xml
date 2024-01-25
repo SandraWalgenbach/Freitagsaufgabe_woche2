@@ -9,5 +9,18 @@
         android:id="@+id/homeFragment"
         android:name="com.example.freitagsaufgabe_woche2.Ui.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_plusFragment"
+            app:destination="@id/plusFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/plusFragment"
+        android:name="com.example.freitagsaufgabe_woche2.Ui.PlusFragment"
+        android:label="fragment_plus"
+        tools:layout="@layout/fragment_plus" >
+        <action
+            android:id="@+id/action_plusFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>
