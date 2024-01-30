@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.freitagsaufgabe_woche2.Adapter.ItemAdapter
+import com.example.freitagsaufgabe_woche2.MainActivity
 import com.example.freitagsaufgabe_woche2.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -29,5 +31,12 @@ class HomeFragment : Fragment() {
 
             navController.navigate(HomeFragmentDirections.actionHomeFragmentToPlusFragment())
         }
+
+        val mainActivity = activity as MainActivity
+
+        val dataset = mainActivity.dataset
+        val adapter = ItemAdapter(dataset)
+        binding.RVelement.adapter = adapter
+
     }
 }
