@@ -45,7 +45,8 @@ class PlusFragment : Fragment() {
             val inputText = binding.ETThinzufGen.text.toString()
 
             if (inputText.isNotEmpty()) {
-                itemBinding.TVelement.setText(inputText)
+                itemBinding.TVelement.text = inputText
+                //itemBinding.TVelement.setText(inputText)
                 navController.navigate(PlusFragmentDirections.actionPlusFragmentToHomeFragment())
             } else {
                 Toast.makeText(requireContext(), "Du musst das Textfeld noch ausfüllen!", Toast.LENGTH_SHORT).show()
