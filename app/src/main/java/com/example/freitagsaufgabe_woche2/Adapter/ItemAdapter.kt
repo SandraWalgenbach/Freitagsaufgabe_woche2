@@ -23,7 +23,7 @@ class ItemAdapter(val dataset: MutableList<Ware>): RecyclerView.Adapter<ItemAdap
     override fun onBindViewHolder(holder: WareViewHolder, position: Int){
         val eintrag = dataset[position]
 
-        holder.binding.TVelement.setText(eintrag.gegenstand.toString())
+        holder.binding.TVelement.setText(eintrag.gegenstand)
 
         holder.binding.IBloeschen.setOnClickListener {
             dataset.removeAt(holder.adapterPosition)

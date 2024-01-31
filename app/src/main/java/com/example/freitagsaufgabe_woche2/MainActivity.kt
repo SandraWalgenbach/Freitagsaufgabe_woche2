@@ -7,14 +7,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.freitagsaufgabe_woche2.Adapter.ItemAdapter
 import com.example.freitagsaufgabe_woche2.Data.Datasource
 import com.example.freitagsaufgabe_woche2.Data.Ware
+import com.example.freitagsaufgabe_woche2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
-    var dataset = Datasource().loadData()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
     }
 }
